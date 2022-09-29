@@ -4,10 +4,10 @@ let port = 5000 || process.env.PORT;
 const cors = require("cors");
 app.use(cors());
 
-const { add, substract, multiply, divide } = require("./modules");
+const { add, substract, multiply, divide } = require("./calcs");
 
 const middleWare = (req, res, next) => {
-  console.log("Global middle ware");
+  console.log("Global middleware");
   next();
 };
 multiply(2, 3);
